@@ -50,7 +50,7 @@
   # Enable auto upgrade
   system.autoUpgrade = {
     enable = true;
-    flake = "github:heywoodlh/nixos-configs#nix-kube";
+    flake = "github:CollinAvidano/nixos-configs#nix-kube";
   };
 
   system.stateVersion = "22.11";

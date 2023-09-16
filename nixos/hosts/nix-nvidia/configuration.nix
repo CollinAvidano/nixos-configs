@@ -36,7 +36,7 @@
     # Enable auto upgrade
   system.autoUpgrade = {
     enable = true;
-    flake = "github:heywoodlh/nixos-configs#nix-nvidia";
+    flake = "github:CollinAvidano/nixos-configs#nix-nvidia";
   };
 
   # Enable Nvidia driver

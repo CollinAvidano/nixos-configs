@@ -40,7 +40,7 @@ in {
       "https://cache.nixos.org/"
     ];
     trusted-users = [
-      "heywoodlh"
+      "collin"
     ];
     trusted-public-keys = [
       #"hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="
@@ -124,8 +124,8 @@ in {
     enable = true;
     extraBackends = [ pkgs.hplipWithPlugin ];
   };
-  users.extraGroups.lp.members = [ "heywoodlh" ];
-  users.extraGroups.scanner.members = [ "heywoodlh" ];
+  users.extraGroups.lp.members = [ "collin" ];
+  users.extraGroups.scanner.members = [ "collin" ];
 
   # Enable sound with pipewire.
   sound.enable = true;
@@ -162,9 +162,9 @@ in {
     };
     syncthing = {
       enable = true;
-      user = "heywoodlh";
-      dataDir = "/home/heywoodlh/Sync";
-      configDir = "/home/heywoodlh/.config/syncthing";
+      user = "collin";
+      dataDir = "/home/collin/Sync";
+      configDir = "/home/collin/.config/syncthing";
     };
   };
 
@@ -176,9 +176,9 @@ in {
       setSocketVariable = true;
     };
   };
-  users.extraGroups.vboxusers.members = [ "heywoodlh" ];
-  users.extraGroups.disk.members = [ "heywoodlh" ];
-  users.extraGroups.video.members = [ "heywoodlh" ];
+  users.extraGroups.vboxusers.members = [ "collin" ];
+  users.extraGroups.disk.members = [ "collin" ];
+  users.extraGroups.video.members = [ "collin" ];
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -194,7 +194,7 @@ in {
     (nerdfonts.override { fonts = [ "Hack" "DroidSansMono" "Iosevka" "JetBrainsMono" ]; })
   ];
 
-  users.users.heywoodlh = {
+  users.users.collin = {
     isNormalUser = true;
     description = "Spencer Heywood";
     extraGroups = [ "networkmanager" "wheel" "adbusers" ];
@@ -230,7 +230,7 @@ in {
     enable = true;
     # Certain features, including CLI integration and system authentication support,
     # require enabling PolKit integration on some desktop environments (e.g. Plasma).
-    polkitPolicyOwners = [ "heywoodlh" ];
+    polkitPolicyOwners = [ "collin" ];
   };
 
   # Home-manager configs
@@ -239,7 +239,7 @@ in {
       inherit fish-configs;
       inherit wezterm-configs;
     };
-    users.heywoodlh = { ... }: {
+    users.collin = { ... }: {
       imports = [
         ../roles/home-manager/linux.nix
         ../roles/home-manager/desktop.nix # base desktop.nix
@@ -256,7 +256,7 @@ in {
         executable = true;
         text = ''
           #!/usr/bin/env bash
-          [[ -d ~/opt/nixos-configs ]] || git clone https://github.com/heywoodlh/nixos-configs
+          [[ -d ~/opt/nixos-configs ]] || git clone https://github.com/CollinAvidano/nixos-configs
           git -C ~/opt/nixos-configs pull origin master
           /run/wrappers/bin/sudo nixos-rebuild switch --flake ~/opt/nixos-configs#$(hostname) --impure $@
         '';

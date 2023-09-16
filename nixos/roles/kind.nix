@@ -55,7 +55,7 @@ in {
 
   # Enable docker
   virtualisation.docker.enable = true;
-  users.users.heywoodlh.extraGroups = [ "docker" ];
+  users.users.collin.extraGroups = [ "docker" ];
 
   systemd.services.kind = {
     description = "Start Kind";
@@ -69,7 +69,7 @@ in {
       Type = "simple";
       ExecStart = "${kind-start}";
       Restart = "on-failure";
-      User = "heywoodlh";
+      User = "collin";
     };
     wantedBy = [ "multi-user.target" ];
   };

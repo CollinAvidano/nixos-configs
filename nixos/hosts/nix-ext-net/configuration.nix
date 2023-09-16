@@ -75,7 +75,7 @@ in {
   # Enable auto upgrade
   system.autoUpgrade = {
     enable = true;
-    flake = "github:heywoodlh/nixos-configs#nix-ext-net";
+    flake = "github:CollinAvidano/nixos-configs#nix-ext-net";
   };
 
   # Disable squid client on this system

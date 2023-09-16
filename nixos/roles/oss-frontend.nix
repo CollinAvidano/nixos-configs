@@ -4,7 +4,7 @@ let
   teddit = {
     port = "8086";
     image_tag = "latest";
-    domain = "teddit.heywoodlh.io";
+    domain = "teddit.collin.io";
     redis_image_tag = "6.2.5-alpine";
   };
   cloudtube = {
@@ -50,7 +50,7 @@ in {
       };
 
       cloudtube = {
-        image = "docker.io/heywoodlh/cloudtube:${cloudtube.image_tag}";
+        image = "docker.io/collin/cloudtube:${cloudtube.image_tag}";
         autoStart = true;
         ports = ["${cloudtube.port}:10412"];
         environment = {
@@ -62,7 +62,7 @@ in {
         ];
       };
       second = {
-        image = "docker.io/heywoodlh/second:${cloudtube.second_image_tag}";
+        image = "docker.io/collin/second:${cloudtube.second_image_tag}";
         autoStart = true;
         extraOptions = [
           "--network=cloudtube"

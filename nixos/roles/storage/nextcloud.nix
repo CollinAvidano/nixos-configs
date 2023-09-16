@@ -9,13 +9,13 @@ in {
   services.nextcloud = {
     enable = true;
     package = unstable.nextcloud27;
-    hostName = "drive.heywoodlh.io";
+    hostName = "drive.collin.io";
     config = {
       dbtype = "pgsql";
       adminpassFile = "/opt/nextcloud/pass.txt";
-      adminuser = "heywoodlh";
+      adminuser = "collin";
       extraTrustedDomains = [
-        "drive.heywoodlh.io"
+        "drive.collin.io"
         "nix-drive.tailscale"
         "nextcloud"
         "nextcloud.tailscale"

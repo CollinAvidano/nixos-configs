@@ -6,7 +6,7 @@ wifi_interface="wlp2s0"
 internal_wifi_regex="HeywoodNTWK"
 home_subnet_pattern='192.168.50.'
 
-PATH="/etc/profiles/per-user/heywoodlh/bin:/run/current-system/sw/bin:/home/heywoodlh/bin:/home/heywoodlh/go/bin:/home/heywoodlh/.local/bin:/home/heywoodlh/bin:/home/heywoodlh/go/bin:/usr/bin/:/usr/sbin:/bin:/sbin:/usr/local/bin"
+PATH="/etc/profiles/per-user/collin/bin:/run/current-system/sw/bin:/home/collin/bin:/home/collin/go/bin:/home/collin/.local/bin:/home/collin/bin:/home/collin/go/bin:/usr/bin/:/usr/sbin:/bin:/sbin:/usr/local/bin"
 
 while read line
 do

@@ -77,7 +77,7 @@
 
   # Enable automatic login for the user.
   services.xserver.displayManager.autoLogin.enable = true;
-  services.xserver.displayManager.autoLogin.user = "heywoodlh";
+  services.xserver.displayManager.autoLogin.user = "collin";
   # Workaround for GNOME autologin: https://github.com/NixOS/nixpkgs/issues/103746#issuecomment-945091229
   systemd.services."getty@tty1".enable = false;
   systemd.services."autovt@tty1".enable = false;
@@ -89,17 +89,17 @@
   ];
 
   # Mount wd-black
-  fileSystems."/home/heywoodlh/mnt/wd-black" = {
+  fileSystems."/home/collin/mnt/wd-black" = {
     device = "/dev/disk/by-uuid/18AB699E4AAEA95F";
     fsType = "ntfs3";
-    options = [ "rw" "uid=heywoodlh" ];
+    options = [ "rw" "uid=collin" ];
   };
 
   # Mount games-ssd
-  fileSystems."/home/heywoodlh/mnt/games-ssd" = {
+  fileSystems."/home/collin/mnt/games-ssd" = {
     device = "/dev/disk/by-uuid/29A41880637FC63C";
     fsType = "ntfs3";
-    options = [ "rw" "uid=heywoodlh" ];
+    options = [ "rw" "uid=collin" ];
   };
 
   system.stateVersion = "23.05";

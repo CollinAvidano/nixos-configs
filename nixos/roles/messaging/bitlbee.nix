@@ -47,7 +47,7 @@
 
   users.groups.signald.members = [
     "bitlbee"
-    "heywoodlh"
+    "collin"
     "signald"
   ];
 

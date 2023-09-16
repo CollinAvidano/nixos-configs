@@ -18,7 +18,7 @@
     script = ''
       set -eu
       rm -rf /tmp/nixos-configs
-      ${pkgs.git}/bin/git clone https://github.com/heywoodlh/nixos-configs.git /tmp/nixos-configs
+      ${pkgs.git}/bin/git clone https://github.com/CollinAvidano/nixos-configs.git /tmp/nixos-configs
       ${pkgs.nixos-rebuild}/bin/nixos-rebuild build --flake /tmp/nixos-configs#nix-tools --impure
       ${pkgs.nixos-rebuild}/bin/nixos-rebuild build --flake /tmp/nixos-configs#nix-precision --impure
       ${pkgs.nixos-rebuild}/bin/nixos-rebuild build --flake /tmp/nixos-configs#nix-nvidia --impure

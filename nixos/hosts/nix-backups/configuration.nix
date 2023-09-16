@@ -68,7 +68,7 @@
   # Enable auto upgrade
   system.autoUpgrade = {
     enable = true;
-    flake = "github:heywoodlh/nixos-configs#nix-backups";
+    flake = "github:CollinAvidano/nixos-configs#nix-backups";
   };
 
   virtualisation.oci-containers.containers.scrutiny.extraOptions = [

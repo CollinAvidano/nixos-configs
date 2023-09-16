@@ -22,7 +22,7 @@
     backend = "docker";
     containers = {
       sunshine = {
-        image = "docker.io/heywoodlh/sunshine:latest";
+        image = "docker.io/collin/sunshine:latest";
         autoStart = true;
         volumes = [
           "/opt/sunshine/config:/config"

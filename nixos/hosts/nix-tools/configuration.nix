@@ -49,7 +49,7 @@
   # Enable auto upgrade
   system.autoUpgrade = {
     enable = true;
-    flake = "github:heywoodlh/nixos-configs#nix-tools";
+    flake = "github:CollinAvidano/nixos-configs#nix-tools";
   };
 
   services.k3s.extraFlags = "--tls-san=nix-tools.tailscale";

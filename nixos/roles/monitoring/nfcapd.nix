@@ -13,7 +13,7 @@
     backend = "docker";
     containers = {
       nfcapd = {
-        image = "docker.io/heywoodlh/nfcapd:1.6.24";
+        image = "docker.io/collin/nfcapd:1.6.24";
         autoStart = true;
         ports = [
           "9995:9995/udp"

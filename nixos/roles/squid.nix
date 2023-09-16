@@ -11,7 +11,7 @@
     backend = "docker";
     containers = {
       squid = {
-        image = "docker.io/heywoodlh/squid:5.2";
+        image = "docker.io/collin/squid:5.2";
         autoStart = true;
         ports = [
           "3128:3128"

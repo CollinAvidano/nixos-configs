@@ -60,7 +60,7 @@
   # Enable auto upgrade
   system.autoUpgrade = {
     enable = true;
-    flake = "github:heywoodlh/nixos-configs#nix-media";
+    flake = "github:CollinAvidano/nixos-configs#nix-media";
   };
 
   # Media mounts

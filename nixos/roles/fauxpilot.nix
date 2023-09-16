@@ -21,14 +21,14 @@
     mkdir -p /opt/fauxpilot/
     [[ -d /opt/fauxpilot/src ]] || ${pkgs.git}/bin/git clone https://github.com/fauxpilot/fauxpilot.git /opt/fauxpilot/src
     ${pkgs.git}/bin/git -C /opt/fauxpilot/src pull origin main
-    ${pkgs.docker}/bin/docker build -t local/heywoodlh/fauxpilot:latest /opt/fauxpilot/src -f /opt/fauxpilot/src/triton.Dockerfile
+    ${pkgs.docker}/bin/docker build -t local/collin/fauxpilot:latest /opt/fauxpilot/src -f /opt/fauxpilot/src/triton.Dockerfile
   '';
 
   virtualisation.oci-containers = {
     backend = "docker";
     containers = {
       fauxpilot = {
-        image = "local/heywoodlh/fauxpilot:latest";
+        image = "local/collin/fauxpilot:latest";
         autoStart = true;
         ports = [
           "8000-8002:8000-8002"
@@ -59,7 +59,7 @@
         };
       };
       copilot-proxy = {
-        image = "docker.io/heywoodlh/copilot-proxy:latest";
+        image = "docker.io/collin/copilot-proxy:latest";
         autoStart = true;
         ports = [
           "5000:5000"

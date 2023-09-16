@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 
 {
-  users.users.heywoodlh.extraGroups = [
+  users.users.collin.extraGroups = [
     "libvirtd"
   ];
   environment.systemPackages = with pkgs; [

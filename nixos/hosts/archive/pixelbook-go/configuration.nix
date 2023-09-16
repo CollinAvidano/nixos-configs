@@ -39,7 +39,7 @@ in {
     ];
   };
 
-  home-manager.users.heywoodlh = {
+  home-manager.users.collin = {
     imports = [
       ../../../roles/home-manager/linux/hyprland/spotify.nix
       ../../../roles/home-manager/linux/hyprland/laptop.nix

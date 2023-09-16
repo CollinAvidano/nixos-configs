@@ -5,7 +5,7 @@
     backend = "docker";
     containers = {
       gotify-convert = {
-        image = "docker.io/heywoodlh/gotify-convert:0.0.1";
+        image = "docker.io/collin/gotify-convert:0.0.1";
         autoStart = true;
         volumes = [
           "/opt/gotify-convert/ntfy/ntfy.yml:/etc/ntfy/ntfy.yml"

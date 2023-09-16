@@ -9,7 +9,7 @@
 
   services.gnome.gnome-remote-desktop.enable = true;
   services.xserver.displayManager.autoLogin = {
-    user = "heywoodlh";
+    user = "collin";
   };
 
   environment.systemPackages = with pkgs; [
@@ -17,7 +17,7 @@
   ];
 
   # GNOME settings through home-manager
-  home-manager.users.heywoodlh = {
+  home-manager.users.collin = {
     dconf.settings = {
       "org.gnome.desktop.remote-desktop.rdp" = {
         screen-share-mode = "mirror-primary";

@@ -21,7 +21,7 @@
   wsl = {
     enable = true;
     wslConf.automount.root = "/mnt";
-    defaultUser = "heywoodlh";
+    defaultUser = "collin";
     startMenuLaunchers = true;
     docker-native.enable = true;
   };
@@ -32,12 +32,12 @@
   ];
 
   # WSL overrides
-  home-manager.users.heywoodlh.programs.vscode.enable = lib.mkForce false;
-  home-manager.users.heywoodlh.programs.tmux.extraConfig = ''
+  home-manager.users.collin.programs.vscode.enable = lib.mkForce false;
+  home-manager.users.collin.programs.tmux.extraConfig = ''
     # https://github.com/microsoft/WSL/issues/5931#issuecomment-1296783606
     set -sg escape-time 50
   '';
-  home-manager.users.heywoodlh.programs.zsh.envExtra = ''
+  home-manager.users.collin.programs.zsh.envExtra = ''
     # WSL extra config
     clear
   '';

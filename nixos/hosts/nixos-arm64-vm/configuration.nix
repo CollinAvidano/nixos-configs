@@ -30,7 +30,7 @@ in {
   # Enable auto upgrade
   system.autoUpgrade = {
     enable = true;
-    flake = "github:heywoodlh/nixos-configs#${hostname}";
+    flake = "github:CollinAvidano/nixos-configs#${hostname}";
   };
 
   system.stateVersion = "23.05";

@@ -28,7 +28,7 @@
     # Enable auto upgrade
   system.autoUpgrade = {
     enable = true;
-    flake = "github:heywoodlh/nixos-configs#nix-precision";
+    flake = "github:CollinAvidano/nixos-configs#nix-precision";
   };
 
   # Virtual machine media

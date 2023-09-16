@@ -53,14 +53,14 @@
     enable = true;
     systemCronJobs = [
       "0 0 * * Sun      root    /opt/certbot/certbot.sh &> /dev/null"
-      "0 1 * * Sun      root    /opt/heywoodlh.tech-certbot/certbot.sh &> /dev/null"
+      "0 1 * * Sun      root    /opt/collin.tech-certbot/certbot.sh &> /dev/null"
     ];
   };
 
   # Enable auto upgrade
   system.autoUpgrade = {
     enable = true;
-    flake = "github:heywoodlh/nixos-configs#nix-pomerium";
+    flake = "github:CollinAvidano/nixos-configs#nix-pomerium";
   };
 
   system.stateVersion = "22.11";

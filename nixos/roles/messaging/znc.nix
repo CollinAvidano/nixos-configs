@@ -1,9 +1,9 @@
 { config, pkgs, ... }:
 
 let
-  znc_hash = builtins.readFile /opt/znc/heywoodlh-hash;
-  znc_salt = builtins.readFile /opt/znc/heywoodlh-salt;
-  bitlbee_pass = builtins.readFile /opt/znc/heywoodlh-password;
+  znc_hash = builtins.readFile /opt/znc/collin-hash;
+  znc_salt = builtins.readFile /opt/znc/collin-salt;
+  bitlbee_pass = builtins.readFile /opt/znc/collin-password;
 in {
   services.znc = {
     enable = true;
@@ -12,9 +12,9 @@ in {
     openFirewall = true;
     config = {
       LoadModule = [ "webadmin" "adminlog" ];
-      User.heywoodlh = {
+      User.collin = {
         Admin = true;
-        Nick = "heywoodlh";
+        Nick = "collin";
         LoadModule = [ "chansaver" "controlpanel" "nickserv" ];
         Network.bitlbee = {
           Server = "nix-media.tailscale +6667 ${bitlbee_pass}";

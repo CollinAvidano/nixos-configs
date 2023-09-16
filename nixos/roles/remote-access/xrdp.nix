@@ -13,7 +13,7 @@
   ];
 
   # GNOME settings through home-manager
-  home-manager.users.heywoodlh = {
+  home-manager.users.collin = {
     ## Create startwm.sh for XRDP
     home.file."startwm.sh".text = ''
       #!/usr/bin/env bash

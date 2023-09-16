@@ -14,5 +14,5 @@
     win-virtio
   ];
   environment.sessionVariables.LIBVIRT_DEFAULT_URI = [ "qemu:///system" ];
-  users.users.heywoodlh.extraGroups = [ "libvirtd" "kvm" "qemu-libvirtd" ];
+  users.users.collin.extraGroups = [ "libvirtd" "kvm" "qemu-libvirtd" ];
 }

@@ -5,7 +5,7 @@ wifi_interface="wlp0s20f3"
 external_wireguard_interface="shadow-external"
 internal_wireguard_interface="shadow-internal"
 
-PATH="/etc/profiles/per-user/heywoodlh/bin:/run/current-system/sw/bin:/home/heywoodlh/bin:/home/heywoodlh/go/bin:/home/heywoodlh/.local/bin:/home/heywoodlh/bin:/home/heywoodlh/go/bin:/usr/bin/:/usr/sbin:/bin:/sbin:/usr/local/bin"
+PATH="/etc/profiles/per-user/collin/bin:/run/current-system/sw/bin:/home/collin/bin:/home/collin/go/bin:/home/collin/.local/bin:/home/collin/bin:/home/collin/go/bin:/usr/bin/:/usr/sbin:/bin:/sbin:/usr/local/bin"
 
 wg-quick up mullvad
 

@@ -13,10 +13,10 @@
     };
   };
 
-  services.xserver.displayManager.gdm.wayland = lib.mkForce true; # lib.mkForce is only required on my setup because I'm using some other NixOS configs that conflict with this value
+  services.xserver.displayManagec.gdm.wayland = lib.mkForce true; # lib.mkForce is only required on my setup because I'm using some other NixOS configs that conflict with this value
   services.xserver.displayManager.defaultSession = "steam-wayland";
   services.xserver.displayManager.autoLogin.enable = true;
-  services.xserver.displayManager.autoLogin.user = "heywoodlh";
+  services.xserver.displayManager.autoLogin.user = "collin";
 
   # Enable GNOME
   sound.enable = true;
@@ -25,7 +25,7 @@
   };
 
   # Create user
-  users.users.heywoodlh = {
+  users.users.collin = {
     isNormalUser = true;
     description = "Spencer Heywood";
   };
@@ -87,7 +87,7 @@
   ];
 
   # GNOME settings through home-manager
-  home-manager.users.heywoodlh = {
+  home-manager.users.collin = {
     dconf.settings = {
       # Enable on-screen keyboard
       "org/gnome/desktop/a11y/applications" = {

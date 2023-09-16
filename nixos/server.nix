@@ -32,7 +32,7 @@ in {
   nix.settings = {
     auto-optimise-store = true;
     trusted-users = [
-      "heywoodlh"
+      "collin"
     ];
     substituters = [
       "http://100.108.77.60:5000" # nix-nvidia
@@ -87,17 +87,17 @@ in {
 
   # Define use
   programs.zsh.enable = true;
-  users.users.heywoodlh = {
+  users.users.collin = {
     isNormalUser = true;
     uid = 1000;
-    home = "/home/heywoodlh";
+    home = "/home/collin";
     description = "Spencer Heywood";
     extraGroups = [ "wheel" ];
     shell = pkgs.zsh;
   };
 
   # Set home-manager configs for username
-  home-manager.users.heywoodlh = { ... }: {
+  home-manager.users.collin = { ... }: {
     imports = [
       ../roles/home-manager/linux.nix
       ../roles/home-manager/linux/no-desktop.nix
@@ -107,14 +107,14 @@ in {
       executable = true;
       text = ''
         #!/usr/bin/env bash
-        [[ -d ~/opt/nixos-configs ]] || git clone https://github.com/heywoodlh/nixos-configs
+        [[ -d ~/opt/nixos-configs ]] || git clone https://github.com/collin/nixos-configs
         git -C ~/opt/nixos-configs pull origin master
         /run/wrappers/bin/sudo nixos-rebuild switch --flake ~/opt/nixos-configs#$(hostname) --impure $@
       '';
     };
   };
 
-  # Allow heywoodlh to run sudo commands without password
+  # Allow collin to run sudo commands without password
   security.sudo.wheelNeedsPassword = false;
 
   # Disable wait-online service for Network Manager
