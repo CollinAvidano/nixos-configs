@@ -13,7 +13,7 @@
     };
   };
 
-  services.xserver.displayManagec.gdm.wayland = lib.mkForce true; # lib.mkForce is only required on my setup because I'm using some other NixOS configs that conflict with this value
+  services.xserver.displayManager.gdm.wayland = lib.mkForce true; # lib.mkForce is only required on my setup because I'm using some other NixOS configs that conflict with this value
   services.xserver.displayManager.defaultSession = "steam-wayland";
   services.xserver.displayManager.autoLogin.enable = true;
   services.xserver.displayManager.autoLogin.user = "collin";
@@ -27,7 +27,7 @@
   # Create user
   users.users.collin = {
     isNormalUser = true;
-    description = "Spencer Heywood";
+    description = "Collin Avidano";
   };
 
   systemd.services.gamescope-switcher = {
