@@ -196,7 +196,7 @@ in {
 
   users.users.collin = {
     isNormalUser = true;
-    description = "Spencer Heywood";
+    description = "Collin Avidano";
     extraGroups = [ "networkmanager" "wheel" "adbusers" ];
     shell = pkgs.bash;
     # users.users.<name>.icon not a NixOS option
