@@ -45,9 +45,16 @@
                       spicetify,
                       nixos-hardware,
                       ... }:
-  flake-utils.lib.eachDefaultSystem (system: let
+ flake-utils.lib.eachSystem [
+        # "aarch64-linux"
+        # "aarch64-darwin"
+        # "x86_64-darwin"
+        "x86_64-linux" ]
+  (system: let
+  # flake-utils.lib.eachSystem (system: let
     pkgs = import nixpkgs {
       inherit system;
+      config.allowBroken = true;
       config.allowUnfree = true;
     };
     in {
@@ -89,6 +96,16 @@
 
     # nixos targets
     packages.nixosConfigurations = {
+      nix-steam-deck = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        specialArgs = inputs;
+        modules = [
+          # "${nixpkgs}/nixos/modules/installer/sd-card/sd-image-x86_64.nix"
+          # "${nixpkgs-unstable}/nixos/modules/installer/sd-card/sd-image.nix"
+          # "${nixpkgs-unstable}/nixos/modules/installer/sd-card/iso-image.nix"
+          ./nixos/hosts/steam-deck/configuration.nix
+        ];
+      };
       nix-yoga = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         specialArgs = inputs;
@@ -103,11 +120,6 @@
           nixos-hardware.nixosModules.dell-xps-13-9310
           ./nixos/hosts/xps/configuration.nix
         ];
-      };
-      nix-steam-deck = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-        specialArgs = inputs;
-        modules = [ ./nixos/hosts/steam-deck/configuration.nix ];
       };
       nix-wsl = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
